@@ -6,3 +6,4 @@ pillow
 numpy==2.2.5
 opencv-python-headless
 tensorflow-cpu
+python-multipart
