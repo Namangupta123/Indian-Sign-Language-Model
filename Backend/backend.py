@@ -33,6 +33,11 @@ async def predict_sign(file: UploadFile = File(...)):
 
     return predicted_sign
 
+@app.get("/")
+async def health_check():
+    return {"status": "running", "model_loaded": MODEL is not None}
+
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
